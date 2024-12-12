@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wishlist</title>
+    <link rel="stylesheet" href="wishlist.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="product.js"></script>
+    <script src="wishlist.js"></script>
+    <script src="shared.js"></script>
+    <script src="new-arrivals.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-brand">NadaBoutique</div>
+        
+        <div class="navbar-menu">
+            <a href="index.html" data-section="home">Home</a>
+            <a href="about.html" data-section="about">About</a>
+            <a href="products.html" data-section="products">Products</a>
+            <a href="new-arrivals.html" data-section="new-arrivals">New Arrivals</a>
+        </div>
+
+        <div class="navbar-icons">
+            <a href="wishlist.html" class="navbar-icon">
+                <i class="fas fa-heart"></i>
+                <span id="wishlist-count" class="icon-badge">0</span>
+            </a>
+            <a href="checkout.html" class="navbar-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="cart-count" class="icon-badge">0</span>
+            </a>
+            <a href="profil.html" class="navbar-icon">
+                <i class="fas fa-user"></i>
+            </a>
+        </div>
+    </nav>
+    <div class="wishlist-page">
+        <!-- Header -->
+        <header class="wishlist-header">
+            <div class="wishlist-container">
+                <h1 class="wishlist-title">Your Wishlist</h1>
+                <a href="index.html" class="wishlist-back-button">Back to Products</a>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main>
+            <section class="wishlist-section">
+                <div class="section-title">
+                    <h1>My Wishlist </h1>
+                </div>
+                <div id="wishlist-container" class="wishlist-container">
+                    <!-- Produk wishlist akan di-render secara dinamis -->
+                </div>
+            </section>
+        </main>
+        <!-- Footer -->
+    </div>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Alamat</h3>
+                <p><strong>Store Surakarta</strong></p>
+                <p>Banjarsari RT XX, RW XX, <br> Kel. Kadipiro, Kec. Banjarsari,<br> Kota Surakarta, Jawa Tengah,<br> Indonesia 57631</p>
+                <p><strong>Store Surakarta</strong></p>
+                <p>STORE MENYUSUL INSYAALLAH</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Informasi</h3>
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Product</a></li>
+                    <li><a href="#">NEW ARRIVAL</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Order</h3>
+                <ul>
+                    <li><a href="#">Cara Order</a></li>
+                    <li><a href="#">Pembayaran</a></li>
+                    <li><a href="#">Pengiriman</a></li>
+                    <li><a href="#">Pengembalian Produk</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Marketplace</h3>
+                <div class="marketplace-links">
+                    <a href="https://shopee.co.id/adityashv?entryPoint=ShopBySearch&searchKeyword=tamasupply25.style"><img src="img/Shopee.png" alt="Shopee"></a>
+                    <a href="#"><img src="img/t.png" alt="Tokopedia"></a>
+                    <a href="#"><img src="img/Blibli.png" alt="Blibli"></a>
+                </div>
+                <div class="search-bar">
+                    <input type="text" id="search-input" placeholder="Cari produk disini...">
+                    <button id="search-button"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+        </div>
+        
+    </footer>
+    </div>
+</body>
+</html>

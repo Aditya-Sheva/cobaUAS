@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NadaBoutique</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-brand">NadaBoutique</div>
+        
+        <div class="navbar-menu">
+            <a href="index.html" data-section="home">Home</a>
+            <a href="about.html" data-section="about">About</a>
+            <a href="products.html" data-section="products">Products</a>
+            <a href="new-arrivals.html" data-section="new-arrivals">New Arrivals</a>
+        </div>
+
+        <div class="navbar-icons">
+            <a href="wishlist.html" class="navbar-icon">
+                <i class="fas fa-heart"></i>
+                <span id="wishlist-count" class="icon-badge">0</span>
+            </a>
+            <a href="checkout.html" class="navbar-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="cart-count" class="icon-badge">0</span>
+            </a>
+            <a href="profil.html" class="navbar-icon">
+                <i class="fas fa-user"></i>
+            </a>
+        </div>
+    </nav>
+
+    <!-- About Section -->
+    <main>
+        <section id="about" class="section-common about-section">
+            <div class="about-container">
+                <h2 class="about-title">About NadaBoutique</h2>
+                <p class="about-description">Kami adalah butik fashion yang berdedikasi untuk memberikan pengalaman berbelanja yang tak terlupakan. Setiap koleksi kami dirancang dengan teliti untuk memenuhi gaya dan kebutuhan wanita modern.</p>
+                
+                <div class="about-details">
+                    <div class="about-card">
+                        <div class="card-icon">
+                            <img src="img/misi.png" alt="Mission Icon">
+                        </div>
+                        <h3>Our Mission</h3>
+                        <p>Memberdayakan wanita melalui fashion yang berkualitas dan berkelanjutan.</p>
+                    </div>
+                    <div class="about-card">
+                        <div class="card-icon">
+                            <img src="img/visi.png" alt="Vision Icon">
+                        </div>
+                        <h3>Our Vision</h3>
+                        <p>Menjadi destinasi fashion terkemuka yang menginspirasi kepercayaan diri.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Alamat</h3>
+                <p><strong>Store Surakarta</strong></p>
+                <p>Banjarsari RT XX, RW XX, <br> Kel. Kadipiro, Kec. Banjarsari,<br> Kota Surakarta, Jawa Tengah,<br> Indonesia 57631</p>
+                <p><strong>Store Surakarta</strong></p>
+                <p>STORE MENYUSUL INSYAALLAH</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Informasi</h3>
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Product</a></li>
+                    <li><a href="#">NEW ARRIVAL</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Order</h3>
+                <ul>
+                    <li><a href="#">Cara Order</a></li>
+                    <li><a href="#">Pembayaran</a></li>
+                    <li><a href="#">Pengiriman</a></li>
+                    <li><a href="#">Pengembalian Produk</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Marketplace</h3>
+                <div class="marketplace-links">
+                    <a href="https://shopee.co.id/adityashv?entryPoint=ShopBySearch&searchKeyword=tamasupply25.style"><img src="img/Shopee.png" alt="Shopee"></a>
+                    <a href="#"><img src="img/t.png" alt="Tokopedia"></a>
+                    <a href="#"><img src="img/Blibli.png" alt="Blibli"></a>
+                </div>
+                <div class="search-bar">
+                    <input type="text" id="search-input" placeholder="Cari produk disini...">
+                    <button id="search-button"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright © 2024 Nada Boutique</p>
+        </div>
+    </footer>
+
+    <script src="shared.js"></script>
+</body>
+</html>

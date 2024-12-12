@@ -1,0 +1,146 @@
+/* Order Confirmation Styles */
+:root {
+    --primary-color: #db76a4;
+    --primary-light: #F9A8D4;
+    --background-light: #FDF2F8;
+    --text-dark: #1F2937;
+    --text-light: #4B5563;
+    --background-dark: #1F2937;
+}
+
+.order-confirmation-section {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.confirmation-container {
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    padding: 2rem;
+    text-align: center;
+}
+
+.confirmation-icon {
+    font-size: 5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.confirmation-container h1 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.order-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+.order-summary,
+.shipping-info {
+    background-color: var(--background-light);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+}
+
+.order-items {
+    margin-bottom: 1rem;
+}
+
+.order-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.order-totals {
+    border-top: 1px solid #ddd;
+    padding-top: 1rem;
+}
+
+.total-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.total-row.total {
+    font-weight: bold;
+}
+
+.order-tracking {
+    margin-bottom: 2rem;
+}
+
+.tracking-steps {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tracking-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0.5;
+}
+
+.tracking-step.active,
+.tracking-step:nth-child(-n+2) {
+    opacity: 1;
+}
+
+.tracking-step .step-icon {
+    background-color: var(--primary-color);
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.tracking-step .step-icon i {
+    font-size: 1.5rem;
+}
+
+.confirmation-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.order-number {
+    background-color: var(--background-light);
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .order-details {
+        grid-template-columns: 1fr;
+    }
+
+    .tracking-steps {
+        flex-direction: column;
+    }
+
+    .tracking-step {
+        flex-direction: row;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .tracking-step .step-icon {
+        margin-right: 1rem;
+        margin-bottom: 0;
+    }
+}

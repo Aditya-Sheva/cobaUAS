@@ -1,0 +1,277 @@
+
+
+/* Wishlist Page Wrapper */
+.wishlist-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header Styling */
+.wishlist-header {
+    background-color: #db76a4;
+    color: #fff;
+    padding: 20px 0;
+    border-bottom: 2px solid #F9A8D4;
+}
+
+.wishlist-header .wishlist-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.wishlist-header .wishlist-title {
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.wishlist-header .wishlist-back-button {
+    text-decoration: none;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.wishlist-header .wishlist-back-button:hover {
+    background-color: #AA7A89;
+    color: #ffffff;
+}
+
+/* Main Section */
+main {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #f8f8f8;
+}
+
+.wishlist-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section-title h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #db76a4;
+}
+
+#wishlist-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .wishlist-header .wishlist-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .wishlist-header .wishlist-title {
+        margin-bottom: 10px;
+    }
+
+    #wishlist-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Wishlist Product Card */
+.product-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 250px; /* Atur lebar kartu agar lebih kecil */
+    margin: 10px; /* Tambahkan margin antar kartu */
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.product-card img {
+    width: 100%;
+    height: 120px; /* Perkecil tinggi gambar */
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+}
+
+.product-card .product-details {
+    padding: 10px; /* Kurangi padding */
+}
+
+.product-card .product-details h3 {
+    font-size: 1rem; /* Perkecil ukuran font */
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.product-card .product-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 8px 0;
+    font-size: 0.85rem; /* Perkecil font info produk */
+    color: #555;
+}
+
+.product-card .product-info .product-price {
+    font-weight: bold;
+    color: #db76a4;
+}
+
+.product-card .product-rating {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.85rem; /* Perkecil ukuran font */
+}
+
+.product-card .product-rating i {
+    color: #ffc107;
+}
+
+/* Actions for Buttons */
+.product-card .product-actions {
+    display: flex;
+    justify-content: center;
+    gap: 8px; /* Kurangi jarak antar tombol */
+    margin-top: auto;
+}
+
+.product-card .btn {
+    padding: 8px 12px; /* Perkecil padding tombol */
+    font-size: 0.8rem; /* Perkecil ukuran font tombol */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.product-card .btn-secondary {
+    background-color: #f44336;
+    color: #fff;
+}
+
+.product-card .btn-secondary:hover {
+    background-color: #c62828;
+}
+
+/* Styling for Product Actions */
+.product-actions {
+    display: flex;
+    justify-content: center;
+    gap: 8px; /* Kurangi jarak antar tombol */
+    margin-top: 8px;
+}
+
+.product-actions .btn-primary {
+    background-color: #28a745; /* Green for Checkout */
+    color: #fff;
+}
+
+.product-actions .btn-primary:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+.product-actions .btn-secondary {
+    background-color: #f44336; /* Red for Remove */
+    color: #fff;
+}
+
+.product-actions .btn-secondary:hover {
+    background-color: #c62828;
+    transform: scale(1.05);
+}
+
+
+/* Empty Wishlist Styling */
+.empty-wishlist {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Pusatkan konten secara vertikal */
+    text-align: center;
+    background-color: #fdfdfd; /* Latar belakang yang bersih dan terang */
+    color: #6c757d; /* Warna teks netral */
+    padding: 20px;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.05);
+}
+
+.empty-wishlist h2 {
+    font-size: 2rem;
+    color: #AA7A89; /* Warna estetis senada dengan tema */
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.empty-wishlist p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: #555; /* Warna teks yang sedikit lebih gelap */
+}
+
+.empty-wishlist .btn {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #AA7A89; /* Warna utama tombol */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.empty-wishlist .btn:hover {
+    background-color: #8D6672; /* Warna hover lebih gelap */
+    transform: scale(1.05); /* Efek animasi hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .empty-wishlist {
+        padding: 10px;
+    }
+
+    .empty-wishlist h2 {
+        font-size: 1.8rem;
+    }
+
+    .empty-wishlist p {
+        font-size: 1rem;
+    }
+
+    .empty-wishlist .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
+

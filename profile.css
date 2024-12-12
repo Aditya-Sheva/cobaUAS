@@ -1,0 +1,147 @@
+/* General Reset */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Profile Container */
+.profile-container {
+    max-width: 800px;
+    margin: 30px auto;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Profile Header */
+.profile-header {
+    text-align: center;
+    background: linear-gradient(135deg, #db76a4, #F9A8D4);
+    color: white;
+    padding: 30px 20px;
+}
+
+.user-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 4px solid white;
+    margin-bottom: 15px;
+}
+
+.user-name {
+    font-size: 1.8rem;
+    margin: 10px 0;
+}
+
+.user-email {
+    font-size: 1rem;
+    font-weight: lighter;
+}
+
+/* Account Stats */
+.account-stats {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 10px;
+    background: #f9f9f9;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+.stat-item h2 {
+    font-size: 1.4rem;
+    color: #d80d73;
+}
+
+.stat-item p {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Order History */
+.order-history {
+    padding: 20px;
+}
+
+.order-history h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #db76a4;
+    border-bottom: 2px solid #2575fc;
+    display: inline-block;
+}
+
+.order-card {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.order-card h3 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.order-card p {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #db76a4;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #2575fc;
+}
+
+.btn-secondary {
+    background-color: #f9f9f9;
+    color: #333;
+    border: 1px solid #ddd;
+}
+
+.btn-secondary:hover {
+    background-color: #f0f0f0;
+}
+
+.btn-danger {
+    background-color: #ff4d4d;
+    color: white;
+}
+
+.btn-danger:hover {
+    background-color: #ff6666;
+}
+
+/* Account Settings */
+.account-settings {
+    padding: 20px;
+    text-align: center;
+}
+
+.account-settings h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #db76a4;
+}

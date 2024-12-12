@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NadaBoutique</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="popup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-brand" id="menu-toggle">NadaBoutique</div>
+        
+        <div class="navbar-menu" id="menu">
+            <a href="index.html" data-section="home">Home</a>
+            <a href="about.html" data-section="about">About</a>
+            <a href="products.html" data-section="products">Products</a>
+            <a href="new-arrivals.html" data-section="new-arrivals">New Arrivals</a>
+        </div>
+    
+        <div class="navbar-icons">
+            <a href="wishlist.html" class="navbar-icon">
+                <i class="fas fa-heart"></i>
+                <span id="wishlist-count" class="icon-badge">0</span>
+            </a>
+            <a href="checkout.html" class="navbar-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="cart-count" class="icon-badge">0</span>
+            </a>
+            <a href="profil.html" class="navbar-icon">
+                <i class="fas fa-user"></i>
+            </a>
+        </div>
+    </nav>
+    
+
+    <!-- Hero Section -->
+    <section class="relative h-screen w-full overflow-hidden">
+        <div id="heroSlider" class="hero-slider relative h-full w-full">
+            <div class="hero-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out opacity-0" 
+                 style="background-image: url(img/RomanGranit_dDayton_Beige_RG60x60.jpg);">
+                <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                    <div class="text-center text-white px-4 transform transition-transform duration-1000 ease-in-out">
+                        <h1 class="text-6xl md:text-8xl font-bold mb-4 opacity-0 transform translate-y-10 transition-all duration-1000 hero-title">
+                            Discover Your Style
+                        </h1>
+                        <p class="text-2xl md:text-4xl mb-8 opacity-0 transform translate-y-10 transition-all duration-1000 delay-500 hero-subtitle">
+                            Elegant Fashion for Every Moment
+                        </p>
+                        <a href="#" class="inline-block bg-white text-black px-8 py-3 rounded-full text-lg hover:bg-opacity-90 transition-all duration-300 opacity-0 transform translate-y-10 transition-all duration-1000 delay-1000 hero-cta">
+                            Shop Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out opacity-0" 
+                 style="background-image: url(img/bgpink.jpg);">
+                <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                    <div class="text-center text-white px-4 transform transition-transform duration-1000 ease-in-out">
+                        <h1 class="text-6xl md:text-8xl font-bold mb-4 opacity-0 transform translate-y-10 transition-all duration-1000 hero-title">
+                            New Collection
+                        </h1>
+                        <p class="text-2xl md:text-4xl mb-8 opacity-0 transform translate-y-10 transition-all duration-1000 delay-500 hero-subtitle">
+                            Fresh Trends Await You
+                        </p>
+                        <a href="#" class="inline-block bg-white text-black px-8 py-3 rounded-full text-lg hover:bg-opacity-90 transition-all duration-300 opacity-0 transform translate-y-10 transition-all duration-1000 delay-1000 hero-cta">
+                            Explore
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out opacity-0" 
+                 style="background-image: url(img/bg3.jpg);">
+                <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                    <div class="text-center text-white px-4 transform transition-transform duration-1000 ease-in-out">
+                        <h1 class="text-6xl md:text-8xl font-bold mb-4 opacity-0 transform translate-y-10 transition-all duration-1000 hero-title">
+                            Summer Sale
+                        </h1>
+                        <p class="text-2xl md:text-4xl mb-8 opacity-0 transform translate-y-10 transition-all duration-1000 delay-500 hero-subtitle">
+                            Fashion at Best Prices
+                        </p>
+                        <a href="#" class="inline-block bg-white text-black px-8 py-3 rounded-full text-lg hover:bg-opacity-90 transition-all duration-300 opacity-0 transform translate-y-10 transition-all duration-1000 delay-1000 hero-cta">
+                            Shop Sale
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex space-x-2 z-10">
+                <button class="slider-dot w-3 h-3 bg-white bg-opacity-50 rounded-full transition-all duration-300" data-slide="0"></button>
+                <button class="slider-dot w-3 h-3 bg-white bg-opacity-50 rounded-full transition-all duration-300" data-slide="1"></button>
+                <button class="slider-dot w-3 h-3 bg-white bg-opacity-50 rounded-full transition-all duration-300" data-slide="2"></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Categories -->
+    <section class="container mx-auto px-4 mb-16 mt-[3%]">
+    <h2 class="text-3xl font-bold text-center mb-10">Kategori Produk</h2>
+    <div class="grid grid-cols-3 sm:grid-cols-6 gap-4 sm:gap-6">
+        <div class="text-center">
+            <div class="bg-white shadow-md rounded-full p-4 mb-4 mx-auto w-16 h-16 sm:w-24 sm:h-24 flex items-center justify-center hover:shadow-lg transition bg-gradient-to-r from-[#B99C8D] via-[#DCD0C0] to-[#F5E6D3]">
+                <i class="fas fa-tshirt text-2xl sm:text-4xl text-white"></i>
+            </div>
+            <h3 class="font-semibold text-sm sm:text-base">Pakaian</h3>
+        </div>
+        <div class="text-center">
+            <div class="bg-white shadow-md rounded-full p-4 mb-4 mx-auto w-16 h-16 sm:w-24 sm:h-24 flex items-center justify-center hover:shadow-lg transition bg-gradient-to-r from-[#B99C8D] via-[#DCD0C0] to-[#F5E6D3]">
+                <i class="fas fa-shoe-prints text-2xl sm:text-4xl text-white"></i>
+            </div>
+            <h3 class="font-semibold text-sm sm:text-base">Sepatu</h3>
+        </div>
+        <div class="text-center">
+            <div class="bg-white shadow-md rounded-full p-4 mb-4 mx-auto w-16 h-16 sm:w-24 sm:h-24 flex items-center justify-center hover:shadow-lg transition bg-gradient-to-r from-[#B99C8D] via-[#DCD0C0] to-[#F5E6D3]">
+                <i class="fas fa-umbrella text-2xl sm:text-4xl text-white"></i>
+            </div>
+            <h3 class="font-semibold text-sm sm:text-base">Aksesoris</h3>
+        </div>
+        <div class="text-center">
+            <div class="bg-white shadow-md rounded-full p-4 mb-4 mx-auto w-16 h-16 sm:w-24 sm:h-24 flex items-center justify-center hover:shadow-lg transition bg-gradient-to-r from-[#B99C8D] via-[#DCD0C0] to-[#F5E6D3]">
+                <i class="fas fa-briefcase text-2xl sm:text-4xl text-white"></i>
+            </div>
+            <h3 class="font-semibold text-sm sm:text-base">Tas</h3>
+        </div>
+        <div class="text-center">
+            <div class="bg-white shadow-md rounded-full p-4 mb-4 mx-auto w-16 h-16 sm:w-24 sm:h-24 flex items-center justify-center hover:shadow-lg transition bg-gradient-to-r from-[#B99C8D] via-[#DCD0C0] to-[#F5E6D3]">
+                <i class="fas fa-glasses text-2xl sm:text-4xl text-white"></i>
+            </div>
+            <h3 class="font-semibold text-sm sm:text-base">Kacamata</h3>
+        </div>
+        <div class="text-center">
+            <div class="bg-white shadow-md rounded-full p-4 mb-4 mx-auto w-16 h-16 sm:w-24 sm:h-24 flex items-center justify-center hover:shadow-lg transition bg-gradient-to-r from-[#B99C8D] via-[#DCD0C0] to-[#F5E6D3]">
+                <i class="fas fa-ring text-2xl sm:text-4xl text-white"></i>
+            </div>
+            <h3 class="font-semibold text-sm sm:text-base">Jam Tangan</h3>
+        </div>
+    </div>
+</section>
+    
+
+    <!-- Products Section --> 
+<section id="products" class="section">
+    <h2>Our Collection</h2>
+    <div class="product-grid" id="product-grid">
+        <!-- Produk akan dimuat secara dinamis -->
+    </div>
+</section>
+
+<script>
+    const products = [
+        { id: 1, name: "Classic White Blouse", price: 295.000, image: "img/11.JPG", rating: 4.5 },
+        { id: 2, name: "Classic White Blouse", price: 295.000, image: "img/44.JPG", rating: 4.3 },
+        { id: 3, name: "Classic White Blouse", price: 295.000, image: "img/33.JPG", rating: 4.7 },
+        { id: 4, name: "Classic White Blouse", price: 295.000, image: "img/77.JPG", rating: 4.6 },
+        { id: 5, name: "Classic White Blouse", price: 295.000, image: "img/55.JPG", rating: 4.4 },
+        { id: 6, name: "Classic White Blouse", price: 295.000, image: "img/66.JPG", rating: 4.2 },
+        { id: 7, name: "Classic White Blouse", price: 295.000, image: "img/88.JPG", rating: 4.2 },
+        { id: 8, name: "Classic White Blouse", price: 295.000, image: "img/22.JPG", rating: 4.2 },
+    ];
+
+    // Ambil 3 produk pertama
+    const limitedProducts = products.slice(0, 8);
+
+    // Ambil elemen grid untuk produk
+    const productGrid = document.getElementById('product-grid');
+    productGrid.innerHTML = ""; // Kosongkan elemen sebelumnya
+
+    limitedProducts.forEach(product => {
+        const productCard = document.createElement('div');
+        productCard.className = 'product-card';
+        productCard.innerHTML = `
+            <a href="detail-product.html?productId=${product.id}" class="product-detail-link">
+            <img src="${product.image}" alt="${product.name}" class="product-image">
+        </a>
+        <div class="product-details">
+            <h3 class="product-name">${product.name}</h3>
+            <div class="product-info">
+                <span class="product-price">Rp${product.price.toFixed(3)}</span>
+                <div class="product-rating">
+                    <i class="fas fa-star"></i>
+                    <span>${product.rating}</span>
+                </div>
+            </div>
+            <div class="product-actions">
+                <button class="btn btn-primary add-to-cart" data-id="${product.id}">
+                    Add to Cart
+                </button>
+                <button class="btn btn-wishlist add-to-wishlist" data-id="${product.id}">
+                    <i class="fas fa-heart"></i>
+                </button>
+            </div>
+        </div>
+        `;
+        productGrid.appendChild(productCard);
+    });
+</script>
+
+    
+
+    <!-- Flash Sale -->
+
+    <section class="bg-gradient-to-r from-[#B99C8D] via-[#DCD0C0] to-[#F5E6D3] py-16 mb-16">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between mb-10">
+                <h2 class="text-3xl font-bold text-[#5D4037]">Flash Sale</h2>
+                <div id="countdown" class="text-[#5D4037] text-2xl"></div>
+            </div>
+            <div class="overflow-x-auto">
+                <div class="flex space-x-6 pb-4">
+                    <div class="flex-shrink-0 w-64 bg-white rounded-lg overflow-hidden shadow-lg relative">
+                        <span class="absolute top-4 left-4 bg-[#D7CCC8] text-[#5D4037] px-3 py-1 rounded-full text-sm">-50%</span>
+                        <img src="flashsale/gaun1.jpg" alt="Produk" class="w-full h-64 object-cover">
+                        <div class="p-4">
+                            <h3 class="font-semibold mb-2 text-[#5D4037]">Gaun Elegan</h3>
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <span class="text-[#D32F2F] font-bold mr-2">Rp 299.000</span>
+                                    <br>
+                                    <span class="line-through text-[#9E9E9E]">Rp 599.000</span>
+                                </div>
+                                <button class="bg-[#795548] text-white px-4 py-2 rounded-full hover:bg-[#6D4C41] transition">Beli</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Lakukan perubahan yang sama untuk produk lainnya -->
+                    <div class="flex-shrink-0 w-64 bg-white rounded-lg overflow-hidden shadow-lg relative">
+                        <span class="absolute top-4 left-4 bg-[#D7CCC8] text-[#5D4037] px-3 py-1 rounded-full text-sm">-40%</span>
+                        <img src="flashsale/jas1.jpg" alt="Produk" class="w-full h-64 object-cover">
+                        <div class="p-4">
+                            <h3 class="font-semibold mb-2 text-[#5D4037]">Jas Casual Trendy</h3>
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <span class="text-[#D32F2F] font-bold mr-2">Rp 399.000</span>
+                                    <br>
+                                    <span class="line-through text-[#9E9E9E]">Rp 699.000</span>
+                                </div>
+                                <button class="bg-[#795548] text-white px-4 py-2 rounded-full hover:bg-[#6D4C41] transition">Beli</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-shrink-0 w-64 bg-white rounded-lg overflow-hidden shadow-lg relative">
+                        <span class="absolute top-4 left-4 bg-[#D7CCC8] text-[#5D4037] px-3 py-1 rounded-full text-sm">-30%</span>
+                        <img src="flashsale/tas1.jpeg" alt="Produk" class="w-full h-64 object-cover">
+                        <div class="p-4">
+                            <h3 class="font-semibold mb-2 text-[#5D4037]">Tas Kulit Premium</h3>
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <span class="text-[#D32F2F] font-bold mr-2">Rp 699.000</span>
+                                    <br>
+                                    <span class="line-through text-[#9E9E9E]">Rp 999.000</span>
+                                </div>
+                                <button class="bg-[#795548] text-white px-4 py-2 rounded-full hover:bg-[#6D4C41] transition">Beli</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-shrink-0 w-64 bg-white rounded-lg overflow-hidden shadow-lg relative">
+                        <span class="absolute top-4 left-4 bg-[#D7CCC8] text-[#5D4037] px-3 py-1 rounded-full text-sm">-25%</span>
+                        <img src="flashsale/butik1.jpg" alt="Produk" class="w-full h-64 object-cover">
+                        <div class="p-4">
+                            <h3 class="font-semibold mb-2 text-[#5D4037]">Jam Tangan Minimalis</h3>
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <span class="text-[#D32F2F] font-bold mr-2">Rp 1.499.000</span>
+                                    <br>
+                                    <span class="line-through text-[#9E9E9E]">Rp 1.999.000</span>
+                                </div>
+                                <button class="bg-[#795548] text-white px-4 py-2 rounded-full hover:bg-[#6D4C41] transition">Beli</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-shrink-0 w-64 bg-white rounded-lg overflow-hidden shadow-lg relative">
+                        <span class="absolute top-4 left-4 bg-[#D7CCC8] text-[#5D4037] px-3 py-1 rounded-full text-sm">-25%</span>
+                        <img src="flashsale/butikk2.jpg" alt="Produk" class="w-full h-64 object-cover">
+                        <div class="p-4">
+                            <h3 class="font-semibold mb-2 text-[#5D4037]">Jam Tangan Minimalis</h3>
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <span class="text-[#D32F2F] font-bold mr-2">Rp 1.499.000</span>
+                                    <br>
+                                    <span class="line-through text-[#9E9E9E]">Rp 1.999.000</span>
+                                </div>
+                                <button class="bg-[#795548] text-white px-4 py-2 rounded-full hover:bg-[#6D4C41] transition">Beli</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-shrink-0 w-64 bg-white rounded-lg overflow-hidden shadow-lg relative">
+                        <span class="absolute top-4 left-4 bg-[#D7CCC8] text-[#5D4037] px-3 py-1 rounded-full text-sm">-25%</span>
+                        <img src="flashsale/butik3.jpg" alt="Produk" class="w-full h-64 object-cover">
+                        <div class="p-4">
+                            <h3 class="font-semibold mb-2 text-[#5D4037]">Jam Tangan Minimalis</h3>
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <span class="text-[#D32F2F] font-bold mr-2">Rp 1.499.000</span>
+                                    <br>
+                                    <span class="line-through text-[#9E9E9E]">Rp 1.999.000</span>
+                                </div>
+                                <button class="bg-[#795548] text-white px-4 py-2 rounded-full hover:bg-[#6D4C41] transition">Beli</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-shrink-0 w-64 bg-white rounded-lg overflow-hidden shadow-lg relative">
+                        <span class="absolute top-4 left-4 bg-[#D7CCC8] text-[#5D4037] px-3 py-1 rounded-full text-sm">-25%</span>
+                        <img src="flashsale/butik4.jpg" alt="Produk" class="w-full h-64 object-cover">
+                        <div class="p-4">
+                            <h3 class="font-semibold mb-2 text-[#5D4037]">Jam Tangan Minimalis</h3>
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <span class="text-[#D32F2F] font-bold mr-2">Rp 1.499.000</span>
+                                    <br>
+                                    <span class="line-through text-[#9E9E9E]">Rp 1.999.000</span>
+                                </div>
+                                <button class="bg-[#795548] text-white px-4 py-2 rounded-full hover:bg-[#6D4C41] transition">Beli</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Arrivals Section -->
+    <section class="new-arrivals-section">
+        <div class="new-arrivals-header">
+            <h2 class="new-arrivals-title">New Arrivals</h2>
+        </div>
+            <div class="new-arrivals-grid" id="new-arrivals-grid">
+                <!-- New arrivals products will be dynamically rendered here -->
+            </div>
+    </section>
+
+
+    <section class="container mx-auto px-8 mb-16 md:px-6 sm:px-4 text-center">
+        <h2 class="text-4xl md:text-3xl sm:text-2xl font-bold mb-12 text-gray-800 border-b-4 border-pink-500 inline-block pb-2">
+            Koleksi Terbaru
+        </h2>
+    
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 md:gap-6 sm:gap-4">
+            <!-- Koleksi 1 -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-xl transform transition-transform hover:scale-105 w-3/4 mx-auto">
+                <img 
+                    src="product/koleksi_panas.png" 
+                    alt="Koleksi Musim Panas" 
+                    class="w-full h-96 md:h-72 sm:h-60 object-cover"
+                >
+                <div class="p-6 sm:p-4">
+                    <h3 class="font-semibold text-lg md:text-base sm:text-sm text-gray-900 mb-2">Koleksi Musim Panas</h3>
+                    <p class="text-gray-600 md:text-sm sm:text-xs mb-4">Desain ringan dan nyaman</p>
+                    <a href="#" class="text-pink-500 hover:underline text-lg font-semibold block text-center">
+                        Lihat Detail
+                    </a>
+                    <div class="popup hidden fixed top-0 left-0 w-full h-full bg-gray-900 bg-opacity-50 flex justify-center items-center z-50">
+                        <div class="popup-content bg-white rounded-lg shadow-lg p-6 sm:p-4 max-w-lg md:max-w-md sm:max-w-sm w-full mx-4 relative">
+                            <button class="close-popup absolute top-3 right-3 text-gray-500 hover:text-gray-800 text-lg font-bold">×</button>
+                            <h3 class="text-xl sm:text-lg font-bold mb-4">Detail Koleksi Musim Panas</h3>
+                            <p class="text-gray-700 sm:text-sm mb-4">
+                                Ini adalah penjelasan lebih detail tentang Koleksi Musim Panas. Desain ringan, nyaman, dan sangat cocok untuk musim panas.
+                            </p>
+                            <a href="#" class="text-pink-500 hover:underline text-lg sm:text-base">Lihat Koleksi Lengkap</a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+    
+    
+            <!-- Koleksi 3 -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-xl transform transition-transform hover:scale-105 w-3/4 mx-auto">
+                <img 
+                    src="product/starstar.png" 
+                    alt="Koleksi Starstar" 
+                    class="w-full h-96 md:h-72 sm:h-60 object-cover"
+                >
+                <div class="p-6 sm:p-4">
+                    <h3 class="font-semibold text-lg md:text-base sm:text-sm text-gray-900 mb-2">Koleksi Starstar</h3>
+                    <p class="text-gray-600 md:text-sm sm:text-xs mb-4">Tampilan penuh gaya dan menawan</p>
+                    <a href="#" class="text-pink-500 hover:underline text-lg font-semibold block text-center">
+                        Lihat Detail
+                    </a>
+                    <div class="popup hidden fixed top-0 left-0 w-full h-full bg-gray-900 bg-opacity-50 flex justify-center items-center z-50">
+                        <div class="popup-content bg-white rounded-lg shadow-lg p-6 sm:p-4 max-w-lg md:max-w-md sm:max-w-sm w-full mx-4 relative">
+                            <button class="close-popup absolute top-3 right-3 text-gray-500 hover:text-gray-800 text-lg font-bold">×</button>
+                            <h3 class="text-xl sm:text-lg font-bold mb-4">Detail Koleksi Musim Panas</h3>
+                            <p class="text-gray-700 sm:text-sm mb-4">
+                                Ini adalah penjelasan lebih detail tentang Koleksi Musim Panas. Desain ringan, nyaman, dan sangat cocok untuk musim panas.
+                            </p>
+                            <a href="#" class="text-pink-500 hover:underline text-lg sm:text-base">Lihat Koleksi Lengkap</a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+    
+            <!-- Koleksi 4 -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-xl transform transition-transform hover:scale-105 w-3/4 mx-auto">
+                <img 
+                    src="product/skena.png" 
+                    alt="Koleksi Skena" 
+                    class="w-full h-96 md:h-72 sm:h-60 object-cover"
+                >
+                <div class="p-6 sm:p-4">
+                    <h3 class="font-semibold text-lg md:text-base sm:text-sm text-gray-900 mb-2">Koleksi Skena</h3>
+                    <p class="text-gray-600 md:text-sm sm:text-xs mb-4">Pilihan yang sempurna untuk semua suasana</p>
+                    <a href="#" class="text-pink-500 hover:underline text-lg font-semibold block text-center">
+                        Lihat Detail
+                    </a>
+                    <div class="popup hidden fixed top-0 left-0 w-full h-full bg-gray-900 bg-opacity-50 flex justify-center items-center z-50">
+                        <div class="popup-content bg-white rounded-lg shadow-lg p-6 sm:p-4 max-w-lg md:max-w-md sm:max-w-sm w-full mx-4 relative">
+                            <button class="close-popup absolute top-3 right-3 text-gray-500 hover:text-gray-800 text-lg font-bold">×</button>
+                            <h3 class="text-xl sm:text-lg font-bold mb-4">Detail Koleksi Musim Panas</h3>
+                            <p class="text-gray-700 sm:text-sm mb-4">
+                                Ini adalah penjelasan lebih detail tentang Koleksi Musim Panas. Desain ringan, nyaman, dan sangat cocok untuk musim panas.
+                            </p>
+                            <a href="#" class="text-pink-500 hover:underline text-lg sm:text-base">Lihat Koleksi Lengkap</a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="relative bg-black">
+        <!-- Video Full Width -->
+        <video class="w-full h-[70vh] md:h-[80vh] lg:h-[90vh] object-cover" autoplay muted loop>
+            <source src="video/butik.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        
+        <!-- Overlay Content -->
+        <div class="absolute inset-0 bg-black bg-opacity-40 flex flex-col items-center justify-center text-center p-6">
+            <!-- Glowing Title -->
+            <h2 class="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-4 glow-text">
+                NADABOUTIQUE.ID
+            </h2>
+            <!-- Glowing Subtitle -->
+            <p class="text-base md:text-lg lg:text-xl text-gray-200 mb-6 glow-text">
+                Experience the art of fashion like never before with our latest collection.
+            </p>
+            
+        </div>
+    </section>
+    
+    
+    
+    
+
+    <!-- Hero Section -->
+    <section class="bg-white py-16">
+        <div class="text-center mb-8">
+            <h1 class="text-4xl font-extrabold text-gray-900">SHOP THE LATEST</h1>
+            <p class="text-gray-500 mt-2">Explore Chic Dresses and Fashion-Forward Apparel</p>
+        </div>
+
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 px-6">
+            <!-- New In -->
+            <div class="relative group overflow-hidden rounded-lg shadow-md">
+                <img src="product/depan_gede.png" alt="Shop New In" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black/50 flex items-center justify-center">
+                    <h2 class="text-white text-3xl font-bold">SHOP NEW IN</h2>
+                </div>
+            </div>
+
+            <!-- Bestseller -->
+            <div class="relative group overflow-hidden rounded-lg shadow-md">
+                <img src="product/depan_gede2.png" alt="Shop Bestseller" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black/50 flex items-center justify-center">
+                    <h2 class="text-white text-3xl font-bold">SHOP BESTSELLER</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="py-16">
+        <div class="text-center mb-8">
+            <h2 class="text-3xl font-bold text-gray-900">FOR EVERY MOMENT</h2>
+            <p class="text-gray-500 mt-2">Trendy Women's Fashion for Every Occasion</p>
+        </div>
+
+        <!-- Grid Container -->
+        <div class="container mx-auto grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-6 px-4">
+            <!-- Category 1 -->
+            <div class="relative group overflow-hidden rounded-lg shadow-md">
+                <img src="product/depan_gede3.png" alt="Casual Comfort" 
+                    class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black/50 flex items-center justify-center">
+                    <p class="text-white text-lg font-medium">Casual Comfort</p>
+                </div>
+            </div>
+
+            <!-- Category 2 -->
+            <div class="relative group overflow-hidden rounded-lg shadow-md">
+                <img src="product/depan4.png" alt="Life of the Party" 
+                    class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black/50 flex items-center justify-center">
+                    <p class="text-white text-lg font-medium">Life of the Party</p>
+                </div>
+            </div>
+
+            <!-- Category 3 -->
+            <div class="relative group overflow-hidden rounded-lg shadow-md">
+                <img src="product/depan5.png" alt="Special Occasion" 
+                    class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black/50 flex items-center justify-center">
+                    <p class="text-white text-lg font-medium">Special Occasion Style</p>
+                </div>
+            </div>
+
+            <!-- Category 4 -->
+            <div class="relative group overflow-hidden rounded-lg shadow-md">
+                <img src="product/depan6.png" alt="Workwear Wonder" 
+                    class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black/50 flex items-center justify-center">
+                    <p class="text-white text-lg font-medium">Salah Pasangan Style</p>
+                </div>
+            </div>
+
+            <!-- Category 5 -->
+            <div class="relative group overflow-hidden rounded-lg shadow-md">
+                <img src="product/depan7.png" alt="Fitness Fashion" 
+                    class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black/50 flex items-center justify-center">
+                    <p class="text-white text-lg font-medium">SoftBoy Fashion</p>
+                </div>
+            </div>
+
+            <!-- Category 6 -->
+            <div class="relative group overflow-hidden rounded-lg shadow-md">
+                <img src="product/depan8.png" alt="Fitness Fashion" 
+                    class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black/50 flex items-center justify-center">
+                    <p class="text-white text-lg font-medium">Outfit Day Fashion</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="bg-gradient-to-b from-gray-100 via-white to-gray-50">
+        <section class="container mx-auto px-6 py-12">
+            <h2 class="text-5xl font-extrabold text-center text-gray-800 mb-16">Blog Posts</h2>
+    
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Blog Post 1 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+                    <div class="relative">
+                        <img src="product/boutique1.jpg" alt="Blog Image" class="w-full h-56 object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-r from-black/50 via-black/30 to-black/10"></div>
+                        <h3 class="absolute bottom-4 left-4 text-white text-xl font-semibold">Top 10 Trending Outfit Musim Panas Wanita</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-400 text-sm mb-3">June 28, 2024</p>
+                        <p class="text-gray-700 leading-relaxed">Jelajahi 10 gaun musim panas trendi teratas untuk wanita dengan Vestes Novas. Temukan potongan sempurna untuk mempercantik lemari pakaian musim panas Anda...</p>
+                    </div>
+                </div>
+    
+                <!-- Blog Post 2 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+                    <div class="relative">
+                        <img src="product/boutique2.jpg" alt="Blog Image" class="w-full h-56 object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-r from-black/50 via-black/30 to-black/10"></div>
+                        <h3 class="absolute bottom-4 left-4 text-white text-xl font-semibold">Cara Menata Pakaian Kasual untuk Hari Musim Panas yang Santai</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-400 text-sm mb-3">June 27, 2024</p>
+                        <p class="text-gray-700 leading-relaxed">Temukan tren teratas pakaian musim panas kasual untuk wanita dengan Vestes Novas. Dari gaun musim panas yang simpel hingga celana pendek yang cantik...</p>
+                    </div>
+                </div>
+    
+                <!-- Blog Post 3 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+                    <div class="relative">
+                        <img src="product/boituque3.jpg" alt="Blog Image" class="w-full h-56 object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-r from-black/50 via-black/30 to-black/10"></div>
+                        <h3 class="absolute bottom-4 left-4 text-white text-xl font-semibold">Pakaian Trendi 4 Juli untuk Wanita di Pesta</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-400 text-sm mb-3">June 26, 2024</p>
+                        <p class="text-gray-700 leading-relaxed">Temukan pakaian 4 Juli trendi terbaik untuk merayakan 4 Juli di berbagai lokasi. Dari Hamptons yang chic hingga suasana pantai...</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- View All Button -->
+            <div class="text-center mt-12">
+                <button class="px-8 py-3 bg-gradient-to-r from-gray-800 to-black text-white text-lg font-medium rounded-lg shadow-md hover:shadow-lg hover:bg-gray-900 transition">Lihat Semua</button>
+            </div>
+        </section>
+    </section>
+    
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Alamat</h3>
+                <p><strong>Store Surakarta</strong></p>
+                <p>Banjarsari RT XX, RW XX, <br> Kel. Kadipiro, Kec. Banjarsari,<br> Kota Surakarta, Jawa Tengah,<br> Indonesia 57631</p>
+                <p><strong>Store Surakarta</strong></p>
+                <p>STORE MENYUSUL INSYAALLAH</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Informasi</h3>
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Product</a></li>
+                    <li><a href="#">NEW ARRIVAL</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Order</h3>
+                <ul>
+                    <li><a href="#">Cara Order</a></li>
+                    <li><a href="#">Pembayaran</a></li>
+                    <li><a href="#">Pengiriman</a></li>
+                    <li><a href="#">Pengembalian Produk</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Marketplace</h3>
+                <div class="marketplace-links">
+                    <a href="https://shopee.co.id/adityashv?entryPoint=ShopBySearch&searchKeyword=tamasupply25.style"><img src="img/Shopee.png" alt="Shopee"></a>
+                    <a href="#"><img src="img/t.png" alt="Tokopedia"></a>
+                    <a href="#"><img src="img/Blibli.png" alt="Blibli"></a>
+                </div>
+                <div class="search-bar">
+                    <input type="text" id="search-input" placeholder="Cari produk disini...">
+                    <button id="search-button"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright © 2024 Nada Boutique</p>
+        </div>
+    </footer>
+
+    <script src="shared.js"></script>
+    <script src="index.js"></script>
+    <script src="product.js"></script>
+    <script src="new-arrivals.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="popup.js"></script>
+    
+</body>
+</html>
